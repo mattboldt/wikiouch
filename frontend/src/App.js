@@ -36,7 +36,10 @@ class App extends Component {
       <div id="main_container">
         <div id="header_space"></div>
         <div id="main">
-          <div id="actionbar" className="" role="navigation"></div>
+          <div id="actionbar" className="" role="navigation">
+            <br />
+            <p>A Randomly Generated wikiHow Article</p>
+          </div>
 
           <div id="container" className="">
             <div id="article_shell">
@@ -52,7 +55,13 @@ class App extends Component {
                   RANDOM
                 </a>
               </div>
+
               {this.urls && <Sidebar urls={this.urls} />}
+
+              <div className="sidebox">
+                <a href="https://github.com/mattboldt/wikiouch">Contribute on Github</a><br />
+                <a href="https://github.com/mattboldt/wikiouch/blob/master/README.md">README</a>
+              </div>
             </div>
           </div>
         </div>
