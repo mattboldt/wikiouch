@@ -33,12 +33,15 @@ class Sidebar extends Component {
         <h2>Create your own wikiOuch</h2>
 
         {['a', 'b', 'c'].map((prop) => {
-          return <textarea
-            key={prop}
-            className="sidebar-input"
-            placeholder="wikiHow url"
-            value={this.state[prop]}
-            onChange={this.onChange.bind(this, prop)}></textarea>
+          return <label>
+            Article {prop}
+            <textarea
+              key={prop}
+              className="sidebar-input"
+              placeholder="wikiHow url"
+              value={this.state[prop]}
+              onChange={this.onChange.bind(this, prop)}></textarea>
+          </label>
         })}
         <a href={this.url} className="search_button" style={{display: 'block', borderRadius: '5px', marginTop: '10px'}}>
           Oof Ouch Submit
