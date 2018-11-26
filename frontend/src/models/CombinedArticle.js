@@ -4,6 +4,10 @@ class CombinedArticle {
     this.a = articles[0];
     this.b = articles[1];
     this.c = articles[2];
+
+    if (!this.a || !this.b || !this.c) {
+      this.failed = true;
+    }
   }
 
   get title() {
@@ -23,6 +27,8 @@ class CombinedArticle {
   }
 
   get content() {
+    if (this.failed) { return []; }
+
     let secs = this.sections;
     let steps = this.steps;
     let images = this.images;
