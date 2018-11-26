@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Wikihow</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body class="mediawiki ltr  sitedir-ltr">
+  <div id="header_outer" role="navigation">
+    <div id="header">
+      <ul id="actions" role="menubar" aria-label="Header navigation">
+        <li id="nav_explore_li" class="nav_item" role="menuitem" aria-labelledby="nav_explore" style="width: 175px; text-align: center;">
+          <div class="nav_icon"></div>
+          <%= form_tag random_path, method: :get do %>
+            <button type="submit" class="nav" id="nav_explore" style="width: 100%; font-size: 18px; border:0; padding:40px 0 0 0; background:none; cursor: pointer;">
+              RANDOM OUCH
+            </button>
+          <% end %>
+        </li>
+      </ul>
+      <!--end actions-->
+      <a href="<%= random_path %>" style="display:block; padding-top: 10px;">
+        <%= image_tag 'logo' %>
+      </a>
+      <!--       <form id="bubble_search" name="search_site" action="/wikiHowTo" method="get" role="search">
+        <input type="text" class="search_box" name="search" value="" placeholder="to do anything..." x-webkit-speech />
+        <input type="submit" value="Search" id="search_site_bubble" class="search_button" />
+      </form> -->
+    </div>
+    <!--end header-->
+    <div id="header_after"></div>
+  </div>
+  <!--end header-outer-->
+  <div id="main_container">
+    <div id="header_space"></div>
+    <div id="main">
+      <div id="actionbar" class="" role="navigation">
+      </div>
+      <!--end actionbar-->
+      <div id="container" class="">
+        <div id="article_shell">
+          <div id="article" role="main">
+            <div id="bodycontents">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
