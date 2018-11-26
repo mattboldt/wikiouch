@@ -8,7 +8,6 @@ class App extends Component {
   componentDidMount() {
     if (!this.urls) {
       this.random();
-      return;
     }
   }
 

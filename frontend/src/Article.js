@@ -12,6 +12,8 @@ class Article extends Component {
   }
 
   componentDidMount() {
+    if (!this.props.urls) { return; }
+
     Api.index(this.props.urls).then((results) => {
       const articles = results.map((r) => new ArticleModel(r));
       const combined = new CombinedArticleModel(articles);
@@ -20,7 +22,7 @@ class Article extends Component {
   }
 
   render() {
-    if (this.state.article) {
+    if (this.props.urls && this.state.article) {
       return <React.Fragment>
         <div id="intro" className="section sticky hasad">
           <h1 className="firstHeading">
