@@ -7,7 +7,8 @@ class Api {
   index(urls) {
     return Promise.all(urls.map((url) => {
       const parsedUrl = encodeURIComponent(url);
-      return fetch(`${URL}?url=${parsedUrl}`).then((res) => {
+
+      return fetch(`${URL}/articles?url=${parsedUrl}`).then((res) => {
         return res.text();
       })
     }));
