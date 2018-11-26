@@ -33,10 +33,9 @@ class Sidebar extends Component {
         <h2>Create your own wikiOuch</h2>
 
         {['a', 'b', 'c'].map((prop) => {
-          return <label>
+          return <label key={prop}>
             Article {prop}
             <textarea
-              key={prop}
               className="sidebar-input"
               placeholder="wikiHow url"
               value={this.state[prop]}
