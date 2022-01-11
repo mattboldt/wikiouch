@@ -71,9 +71,9 @@ class Article {
     let images = [];
     for (let image of html) {
       if (isVideo) {
-        images.push(<img src={image.dataset.gifsrc} alt={image.dataset.src} />);
+        images.push(<img src={`https://www.wikihow.com${image.dataset.gifsrc}`} alt={image.dataset.src} />);
       } else {
-        images.push(<img src={image.dataset.srclarge} alt={image.alt} />);
+        images.push(<img src={`https://www.wikihow.com${image.dataset.srclarge}`} alt={image.alt} />);
       }
     }
     return images;
