@@ -1,6 +1,6 @@
 # wikiOuch
 
-This is the repo for https://wikiouch.com. wikiOuch takes a random collection of wikiHow pages and mashes them together creating a unique, confusing, bizarre, and sometimes morbid how-to article. You can optionally enter your own wikihow urls to see how specific pages blend together.
+This is the repo for https://wikiouch.netlify.app. wikiOuch takes a random collection of wikiHow pages and mashes them together creating a unique, confusing, bizarre, and sometimes morbid how-to article. You can optionally enter your own wikihow urls to see how specific pages blend together.
 
 ## Development
 
