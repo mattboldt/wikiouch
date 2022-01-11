@@ -18,9 +18,9 @@ class Article {
   }
 
   get sections() {
-    let html = this.queryAll('div#content div.section span.mw-headline span');
+    let html = this.queryAll('div#bodyContent div.section span.mw-headline span');
     if (html.length === 0) {
-      html = this.queryAll('div#content div.section span.mw-headline');
+      html = this.queryAll('div#bodyContent div.section span.mw-headline');
       if (html.length === 0) {
         console.error('Bad section data'); return [];
       }
@@ -36,7 +36,7 @@ class Article {
   }
 
   get steps() {
-    const html = this.queryAll('div#content div.section div.section_text ol');
+    const html = this.queryAll('div#bodyContent div.section div.section_text ol');
     if (html.length === 0) { console.error('Bad step data'); return []; }
     let allSteps = [];
 
@@ -56,10 +56,10 @@ class Article {
 
   get images() {
     let isVideo = false;
-    let html = this.queryAll('div#content div.section div.section_text div.mwimg img');
+    let html = this.queryAll('div#bodyContent div.section div.section_text div.mwimg img');
 
     if (html.length === 0) {
-      html = this.queryAll('div#content div.section div.section_text div.mwimg div.video-player video');
+      html = this.queryAll('div#bodyContent div.section div.section_text div.mwimg div.video-player video');
       if (html.length === 0) {
         console.error('Bad image or gif data');
         return [];
